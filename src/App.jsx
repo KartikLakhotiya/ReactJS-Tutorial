@@ -4,11 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Hello from './components/Hello'
 import Message from './components/Message'
-import Counter from './components/Counter'
 import NameList from './components/NameList'
 import HoverCounter from './components/HoverCounter'
 import PostList from './components/PostList'
 import InsertPostData from './components/InsertPostData'
+import CounterClass from './components/CounterClass'
+import CounterHook from './components/CounterHook'
+import CounterPrevState from './components/CounterPrevState'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,11 +21,13 @@ function App() {
         <p>This is a children prop</p>
       </Hello> */}
       {/* <Message name="Class" /> */}
-      {/* <Counter /> */}
+      {/* <CounterClass /> */}
+      {/* <CounterHook /> */}
+      <CounterPrevState />
       {/* <NameList /> */}
       {/* <HoverCounter /> */}
       {/* <PostList /> */}
-      <InsertPostData />
+      {/* <InsertPostData /> */}
     </>
   )
 }
