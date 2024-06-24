@@ -12,6 +12,7 @@ import CounterClass from './components/CounterClass'
 import CounterHook from './components/CounterHook'
 import CounterPrevState from './components/CounterPrevState'
 import FormUseState from './components/FormUseState'
+import ArrayUseState from './components/ArrayUseState'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +26,8 @@ function App() {
       {/* <CounterClass /> */}
       {/* <CounterHook /> */}
       {/* <CounterPrevState /> */}
-      <FormUseState />
+      {/* <FormUseState /> */}
+      <ArrayUseState />
       {/* <NameList /> */}
       {/* <HoverCounter /> */}
       {/* <PostList /> */}
