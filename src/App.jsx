@@ -11,6 +11,7 @@ import InsertPostData from './components/InsertPostData'
 import CounterClass from './components/CounterClass'
 import CounterHook from './components/CounterHook'
 import CounterPrevState from './components/CounterPrevState'
+import FormUseState from './components/FormUseState'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,8 @@ function App() {
       {/* <Message name="Class" /> */}
       {/* <CounterClass /> */}
       {/* <CounterHook /> */}
-      <CounterPrevState />
+      {/* <CounterPrevState /> */}
+      <FormUseState />
       {/* <NameList /> */}
       {/* <HoverCounter /> */}
       {/* <PostList /> */}
