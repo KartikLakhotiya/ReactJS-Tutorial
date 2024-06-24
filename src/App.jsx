@@ -7,6 +7,7 @@ import Message from './components/Message'
 import Counter from './components/Counter'
 import NameList from './components/NameList'
 import HoverCounter from './components/HoverCounter'
+import PostList from './components/PostList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,8 @@ function App() {
       {/* <Message name="Class" /> */}
       {/* <Counter /> */}
       {/* <NameList /> */}
-      <HoverCounter />
+      {/* <HoverCounter /> */}
+      <PostList />
     </>
   )
 }
