@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -16,9 +16,14 @@ import ArrayUseState from './components/ArrayUseState'
 import DocTitleCount from './components/DocTitleCount'
 import MousePosition from './components/MousePosition'
 import DataFetching from './components/DataFetching'
+import ComponentC from './components/ComponentC'
+
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
 
 function App() {
   const [count, setCount] = useState(0)
+
 
   return (
     <>
@@ -33,11 +38,17 @@ function App() {
       {/* <ArrayUseState /> */}
       {/* <DocTitleCount /> */}
       {/* <MousePosition /> */}
-      <DataFetching />
+      {/* <DataFetching /> */}
       {/* <NameList /> */}
       {/* <HoverCounter /> */}
       {/* <PostList /> */}
       {/* <InsertPostData /> */}
+      <UserContext.Provider value={'Kartik'}>
+        <ChannelContext.Provider value={'Code Evolution'}>
+          <ComponentC />
+
+        </ChannelContext.Provider>
+      </UserContext.Provider>
 
     </>
   )
