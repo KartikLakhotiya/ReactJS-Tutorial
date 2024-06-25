@@ -23,6 +23,8 @@ import ComponentA from './components/UseReducer/UseContext/ComponentA'
 import ComponentB from './components/UseReducer/UseContext/ComponentB'
 import ComponentC from './components/UseReducer/UseContext/ComponentC'
 import DataFetchingTwo from './components/UseReducer/DataFetching/DataFetchingTwo'
+import FocusInput from './components/UseRef/FocusInput'
+import Form from './components/CustomHooks/Form'
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -84,7 +86,9 @@ function App() {
         </div>
       </CountCOntext.Provider> */}
 
-      <DataFetchingTwo />
+      {/* <DataFetchingTwo /> */}
+      {/* <FocusInput /> */}
+      <Form />
 
     </>
   )

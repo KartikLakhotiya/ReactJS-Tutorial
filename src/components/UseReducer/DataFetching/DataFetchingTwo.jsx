@@ -25,6 +25,8 @@ const reducer = (state, action) => {
     }
 }
 
+
+
 const DataFetchingTwo = () => {
     const [state, dispatch] = useReducer(reducer, initialState)
     useEffect(() => {
