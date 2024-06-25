@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -16,13 +16,34 @@ import ArrayUseState from './components/ArrayUseState'
 import DocTitleCount from './components/DocTitleCount'
 import MousePosition from './components/MousePosition'
 import DataFetching from './components/DataFetching'
-import ComponentC from './components/ComponentC'
+import CounterOne from './components/UseReducer/CounterOne'
+import CounterTwo from './components/UseReducer/CounterTwo'
+import CounterThree from './components/UseReducer/CounterThree'
+import ComponentA from './components/UseReducer/UseContext/ComponentA'
+import ComponentB from './components/UseReducer/UseContext/ComponentB'
+import ComponentC from './components/UseReducer/UseContext/ComponentC'
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
+export const CountCOntext = React.createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1;
+    case 'decrement':
+      return state - 1;
+    case 'reset':
+      return initialState
+    default:
+      state
+
+  }
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, dispatch] = useReducer(reducer, initialState)
 
 
   return (
@@ -43,12 +64,23 @@ function App() {
       {/* <HoverCounter /> */}
       {/* <PostList /> */}
       {/* <InsertPostData /> */}
-      <UserContext.Provider value={'Kartik'}>
+      {/* <UserContext.Provider value={'Kartik'}>
         <ChannelContext.Provider value={'Code Evolution'}>
           <ComponentC />
 
         </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+      {/* <CounterOne /> */}
+      {/* <CounterTwo /> */}
+      {/* <CounterThree /> */}
+      <CountCOntext.Provider value={{ countState: count, countDispatch: dispatch }}>
+        <div>
+          <h1>{count}</h1>
+          <ComponentA />
+          <ComponentB />
+          <ComponentC />
+        </div>
+      </CountCOntext.Provider>
 
     </>
   )
