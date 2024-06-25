@@ -13,6 +13,9 @@ import CounterHook from './components/CounterHook'
 import CounterPrevState from './components/CounterPrevState'
 import FormUseState from './components/FormUseState'
 import ArrayUseState from './components/ArrayUseState'
+import DocTitleCount from './components/DocTitleCount'
+import MousePosition from './components/MousePosition'
+import DataFetching from './components/DataFetching'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,11 +30,15 @@ function App() {
       {/* <CounterHook /> */}
       {/* <CounterPrevState /> */}
       {/* <FormUseState /> */}
-      <ArrayUseState />
+      {/* <ArrayUseState /> */}
+      {/* <DocTitleCount /> */}
+      {/* <MousePosition /> */}
+      <DataFetching />
       {/* <NameList /> */}
       {/* <HoverCounter /> */}
       {/* <PostList /> */}
       {/* <InsertPostData /> */}
+
     </>
   )
 }
