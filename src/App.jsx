@@ -22,6 +22,7 @@ import CounterThree from './components/UseReducer/CounterThree'
 import ComponentA from './components/UseReducer/UseContext/ComponentA'
 import ComponentB from './components/UseReducer/UseContext/ComponentB'
 import ComponentC from './components/UseReducer/UseContext/ComponentC'
+import DataFetchingTwo from './components/UseReducer/DataFetching/DataFetchingTwo'
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -73,14 +74,17 @@ function App() {
       {/* <CounterOne /> */}
       {/* <CounterTwo /> */}
       {/* <CounterThree /> */}
-      <CountCOntext.Provider value={{ countState: count, countDispatch: dispatch }}>
+
+      {/* <CountCOntext.Provider value={{ countState: count, countDispatch: dispatch }}>
         <div>
           <h1>{count}</h1>
           <ComponentA />
           <ComponentB />
           <ComponentC />
         </div>
-      </CountCOntext.Provider>
+      </CountCOntext.Provider> */}
+
+      <DataFetchingTwo />
 
     </>
   )
